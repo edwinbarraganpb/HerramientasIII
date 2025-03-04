@@ -10,9 +10,9 @@ namespace GestionTratatmientos.Model
 {
     class Conexion
     {
-        private string connectionString = "server=SYN\\B13-204-22896;integrated security=true;database=dbTratamientosMedicos";
+        private static string connectionString = "server=SYN\\B13-204-22896;integrated security=true;database=dbTratamientosMedicos";
 
-        public SqlConnection AbrirConexion() 
+        public static SqlConnection AbrirConexion() 
         
         {
             using (SqlConnection con = new SqlConnection(connectionString))
