@@ -31,15 +31,16 @@
             label1 = new Label();
             txtCedulaPaciente = new TextBox();
             groupBox1 = new GroupBox();
-            label2 = new Label();
-            dtpFechaAsignacion = new DateTimePicker();
-            dtpFechaInicio = new DateTimePicker();
-            label3 = new Label();
+            comboBox1 = new ComboBox();
+            txtObservaciones = new TextBox();
+            label5 = new Label();
             dtpFechaFinal = new DateTimePicker();
             label4 = new Label();
-            label5 = new Label();
-            txtObservaciones = new TextBox();
-            button1 = new Button();
+            dtpFechaInicio = new DateTimePicker();
+            label3 = new Label();
+            dtpFechaAsignacion = new DateTimePicker();
+            label2 = new Label();
+            btnAsignarTratamiento = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -61,6 +62,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(comboBox1);
             groupBox1.Controls.Add(txtObservaciones);
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(dtpFechaFinal);
@@ -76,43 +78,30 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Datos del tratamiento";
             // 
-            // label2
+            // comboBox1
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(34, 44);
-            label2.Name = "label2";
-            label2.Size = new Size(98, 15);
-            label2.TabIndex = 1;
-            label2.Text = "Fecha asignación";
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(228, 80);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 23);
+            comboBox1.TabIndex = 8;
             // 
-            // dtpFechaAsignacion
+            // txtObservaciones
             // 
-            dtpFechaAsignacion.CustomFormat = "yyyy/MM/dd";
-            dtpFechaAsignacion.Format = DateTimePickerFormat.Custom;
-            dtpFechaAsignacion.Location = new Point(166, 38);
-            dtpFechaAsignacion.Name = "dtpFechaAsignacion";
-            dtpFechaAsignacion.Size = new Size(200, 23);
-            dtpFechaAsignacion.TabIndex = 2;
-            dtpFechaAsignacion.Value = new DateTime(2025, 3, 4, 13, 35, 28, 0);
+            txtObservaciones.Location = new Point(167, 173);
+            txtObservaciones.Multiline = true;
+            txtObservaciones.Name = "txtObservaciones";
+            txtObservaciones.Size = new Size(199, 106);
+            txtObservaciones.TabIndex = 7;
             // 
-            // dtpFechaInicio
+            // label5
             // 
-            dtpFechaInicio.CustomFormat = "yyyy/MM/dd";
-            dtpFechaInicio.Format = DateTimePickerFormat.Custom;
-            dtpFechaInicio.Location = new Point(166, 81);
-            dtpFechaInicio.Name = "dtpFechaInicio";
-            dtpFechaInicio.Size = new Size(200, 23);
-            dtpFechaInicio.TabIndex = 4;
-            dtpFechaInicio.Value = new DateTime(2025, 3, 4, 13, 35, 28, 0);
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(34, 87);
-            label3.Name = "label3";
-            label3.Size = new Size(70, 15);
-            label3.TabIndex = 3;
-            label3.Text = "Fecha inicio";
+            label5.AutoSize = true;
+            label5.Location = new Point(34, 176);
+            label5.Name = "label5";
+            label5.Size = new Size(84, 15);
+            label5.TabIndex = 3;
+            label5.Text = "Observaciones";
             // 
             // dtpFechaFinal
             // 
@@ -133,38 +122,60 @@
             label4.TabIndex = 5;
             label4.Text = "Fecha final";
             // 
-            // label5
+            // dtpFechaInicio
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(34, 176);
-            label5.Name = "label5";
-            label5.Size = new Size(84, 15);
-            label5.TabIndex = 3;
-            label5.Text = "Observaciones";
+            dtpFechaInicio.CustomFormat = "yyyy/MM/dd";
+            dtpFechaInicio.Format = DateTimePickerFormat.Custom;
+            dtpFechaInicio.Location = new Point(166, 81);
+            dtpFechaInicio.Name = "dtpFechaInicio";
+            dtpFechaInicio.Size = new Size(200, 23);
+            dtpFechaInicio.TabIndex = 4;
+            dtpFechaInicio.Value = new DateTime(2025, 3, 4, 13, 35, 28, 0);
             // 
-            // txtObservaciones
+            // label3
             // 
-            txtObservaciones.Location = new Point(167, 173);
-            txtObservaciones.Multiline = true;
-            txtObservaciones.Name = "txtObservaciones";
-            txtObservaciones.Size = new Size(199, 106);
-            txtObservaciones.TabIndex = 7;
+            label3.AutoSize = true;
+            label3.Location = new Point(34, 87);
+            label3.Name = "label3";
+            label3.Size = new Size(70, 15);
+            label3.TabIndex = 3;
+            label3.Text = "Fecha inicio";
             // 
-            // button1
+            // dtpFechaAsignacion
             // 
-            button1.Location = new Point(172, 445);
-            button1.Name = "button1";
-            button1.Size = new Size(154, 23);
-            button1.TabIndex = 3;
-            button1.Text = "Asignar tratamiento";
-            button1.UseVisualStyleBackColor = true;
+            dtpFechaAsignacion.CustomFormat = "yyyy/MM/dd";
+            dtpFechaAsignacion.Format = DateTimePickerFormat.Custom;
+            dtpFechaAsignacion.Location = new Point(166, 38);
+            dtpFechaAsignacion.Name = "dtpFechaAsignacion";
+            dtpFechaAsignacion.Size = new Size(200, 23);
+            dtpFechaAsignacion.TabIndex = 2;
+            dtpFechaAsignacion.Value = new DateTime(2025, 3, 4, 13, 35, 28, 0);
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(34, 44);
+            label2.Name = "label2";
+            label2.Size = new Size(98, 15);
+            label2.TabIndex = 1;
+            label2.Text = "Fecha asignación";
+            // 
+            // btnAsignarTratamiento
+            // 
+            btnAsignarTratamiento.Location = new Point(172, 445);
+            btnAsignarTratamiento.Name = "btnAsignarTratamiento";
+            btnAsignarTratamiento.Size = new Size(154, 23);
+            btnAsignarTratamiento.TabIndex = 3;
+            btnAsignarTratamiento.Text = "Asignar tratamiento";
+            btnAsignarTratamiento.UseVisualStyleBackColor = true;
+            btnAsignarTratamiento.Click += button1_Click_1;
             // 
             // frmTratamiento
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(557, 526);
-            Controls.Add(button1);
+            Controls.Add(btnAsignarTratamiento);
             Controls.Add(groupBox1);
             Controls.Add(txtCedulaPaciente);
             Controls.Add(label1);
@@ -189,6 +200,7 @@
         private Label label4;
         private DateTimePicker dtpFechaInicio;
         private Label label3;
-        private Button button1;
+        private Button btnAsignarTratamiento;
+        private ComboBox comboBox1;
     }
 }

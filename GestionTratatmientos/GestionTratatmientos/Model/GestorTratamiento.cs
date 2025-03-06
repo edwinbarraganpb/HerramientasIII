@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Win32;
@@ -10,19 +11,19 @@ namespace GestionTratatmientos.Model
 {
     class GestorTratamiento
     {
-        private SqlConnection enlaceBD;
+        public static Conexion enlaceBD;
+        public static SqlConnection BD;
 
-        public GestorTratamiento()
+        public static bool AsignarTratamiento(Tratatmiento nuevoTratamiento)
         {
-            enlaceBD = Conexion.AbrirConexion();
-        }
-        public bool AsignarTratamiento(Tratatmiento nuevoTratamiento)
-        {
+            enlaceBD = new Conexion();
+            BD = enlaceBD.AbrirConexion();
+            MessageBox.Show(BD.ConnectionString);
             string query = "INSERT INTO [TblTratamiento] " +
                 "([cedulaPaciente] ,[fechaAsignado],[fechaInicio],[fechaFinalizacion],[observaciones]) " +
                 "VALUES " +
                 "(@cedulaPaciente,@fechaAsignado,@fechaInicio,@fechaFinalizacion,@observaciones)";
-            using (SqlCommand command = new SqlCommand(query, enlaceBD))
+            using (SqlCommand command = new SqlCommand(query, BD))
             {
                 command.Parameters.AddWithValue("@cedulaPaciente", nuevoTratamiento.CedulaPaciente);
                 command.Parameters.AddWithValue("@fechaAsignado", nuevoTratamiento.FechaAsignado);
@@ -30,7 +31,7 @@ namespace GestionTratatmientos.Model
                 command.Parameters.AddWithValue("@fechaFinalizacion", nuevoTratamiento.FechaFinalizacion);
                 command.Parameters.AddWithValue("@observaciones", nuevoTratamiento.Observaciones);
 
-                enlaceBD.Open();
+                BD.Open();
                 try
                 {
                     if (command.ExecuteNonQuery() == 1)
@@ -48,15 +49,15 @@ namespace GestionTratatmientos.Model
             }            
         }
 
-        public SqlDataReader ListarTratamientos(string cedulaPaciente)
+        public static SqlDataReader ListarTratamientos(string cedulaPaciente)
         {
             string query = "Select * from [TblTratamiento] " +
                "where cedulaPaciente = @cedulaPaciente";
             SqlDataReader registros = null;
-            using (SqlCommand command = new SqlCommand(query, enlaceBD))
+            using (SqlCommand command = new SqlCommand(query, BD))
             {
                 command.Parameters.AddWithValue("@cedulaPaciente", cedulaPaciente);
-                enlaceBD.Open();
+                BD.Open();
                 registros = command.ExecuteReader();
             }
 

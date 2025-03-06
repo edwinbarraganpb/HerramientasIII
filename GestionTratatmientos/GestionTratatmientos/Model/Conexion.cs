@@ -10,9 +10,9 @@ namespace GestionTratatmientos.Model
 {
     class Conexion
     {
-        private static string connectionString = "server=SYN\\B13-204-22896;integrated security=true;database=dbTratamientosMedicos";
+        private string connectionString = "server=B13-204-22896;integrated security=true;database=dbTratamientosMedicos";
 
-        public static SqlConnection AbrirConexion() 
+        public SqlConnection AbrirConexion() 
         
         {
             using (SqlConnection con = new SqlConnection(connectionString))
@@ -20,12 +20,13 @@ namespace GestionTratatmientos.Model
                 try
                 {
                     con.Open();
+                    MessageBox.Show("Conectado: " + con.ConnectionString);
                     return con;
 
                 }
                 catch (Exception ex)
                 {
-                    System.Windows.Forms.MessageBox.Show("Error en la conexion");
+                    System.Windows.Forms.MessageBox.Show("Error en la conexion" + ex.Message);
                     return null;
                 }
             }
