@@ -14,6 +14,7 @@ namespace GestionTratatmientos.Controller
         public TratamientoController(string cedulaPaciente, DateTime fechaAsignado, DateTime fechaInicio, DateTime fechaFinalizacion, string observaciones = "")
         {
             this.gestionTratamiento = new Tratatmiento( cedulaPaciente,  fechaAsignado,  fechaInicio,  fechaFinalizacion,  observaciones );
+            asdfasdf
         }        
     }
 }

@@ -15,16 +15,16 @@
       "RelativeMoniker": "D:0:0:{4C0AC265-40B2-4707-AA42-F626F60C8757}|GestionTratatmientos\\GestionTratatmientos.csproj|solutionrelative:gestiontratatmientos\\model\\tratatmiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{4C0AC265-40B2-4707-AA42-F626F60C8757}|GestionTratatmientos\\GestionTratatmientos.csproj|c:\\users\\usuario\\documents\\github\\herramientasiii\\gestiontratatmientos\\gestiontratatmientos\\model\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C0AC265-40B2-4707-AA42-F626F60C8757}|GestionTratatmientos\\GestionTratatmientos.csproj|solutionrelative:gestiontratatmientos\\model\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4C0AC265-40B2-4707-AA42-F626F60C8757}|GestionTratatmientos\\GestionTratatmientos.csproj|C:\\Users\\Usuario\\Documents\\GitHub\\HerramientasIII\\GestionTratatmientos\\gestiontratatmientos\\view\\frmtratamiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4C0AC265-40B2-4707-AA42-F626F60C8757}|GestionTratatmientos\\GestionTratatmientos.csproj|solutionrelative:gestiontratatmientos\\view\\frmtratamiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4C0AC265-40B2-4707-AA42-F626F60C8757}|GestionTratatmientos\\GestionTratatmientos.csproj|C:\\Users\\Usuario\\Documents\\GitHub\\HerramientasIII\\GestionTratatmientos\\gestiontratatmientos\\view\\frmpaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4C0AC265-40B2-4707-AA42-F626F60C8757}|GestionTratatmientos\\GestionTratatmientos.csproj|solutionrelative:gestiontratatmientos\\view\\frmpaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4C0AC265-40B2-4707-AA42-F626F60C8757}|GestionTratatmientos\\GestionTratatmientos.csproj|c:\\users\\usuario\\documents\\github\\herramientasiii\\gestiontratatmientos\\gestiontratatmientos\\model\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C0AC265-40B2-4707-AA42-F626F60C8757}|GestionTratatmientos\\GestionTratatmientos.csproj|solutionrelative:gestiontratatmientos\\model\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4C0AC265-40B2-4707-AA42-F626F60C8757}|GestionTratatmientos\\GestionTratatmientos.csproj|c:\\users\\usuario\\documents\\github\\herramientasiii\\gestiontratatmientos\\gestiontratatmientos\\model\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -64,7 +64,7 @@
               "RelativeDocumentMoniker": "GestionTratatmientos\\Controller\\TratamientoController.cs",
               "ToolTip": "C:\\Users\\Usuario\\Documents\\GitHub\\HerramientasIII\\GestionTratatmientos\\GestionTratatmientos\\Controller\\TratamientoController.cs",
               "RelativeToolTip": "GestionTratatmientos\\Controller\\TratamientoController.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAIAwwAoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAIAwwAUAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-04T18:41:49.439Z",
               "EditorCaption": ""
@@ -77,7 +77,7 @@
               "RelativeDocumentMoniker": "GestionTratatmientos\\Model\\GestorTratamiento.cs",
               "ToolTip": "C:\\Users\\Usuario\\Documents\\GitHub\\HerramientasIII\\GestionTratatmientos\\GestionTratatmientos\\Model\\GestorTratamiento.cs",
               "RelativeToolTip": "GestionTratatmientos\\Model\\GestorTratamiento.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAIwD4AAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAcwDQAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-04T17:34:34.141Z",
               "EditorCaption": ""
@@ -97,7 +97,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "Paciente.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\GitHub\\HerramientasIII\\GestionTratatmientos\\GestionTratatmientos\\Model\\Paciente.cs",
               "RelativeDocumentMoniker": "GestionTratatmientos\\Model\\Paciente.cs",
@@ -118,24 +118,22 @@
               "RelativeToolTip": "GestionTratatmientos\\Model\\Conexion.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAIAwwBwAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T18:08:29.212Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-27T18:08:29.212Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "frmPaciente.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\GitHub\\HerramientasIII\\GestionTratatmientos\\GestionTratatmientos\\View\\frmPaciente.cs",
               "RelativeDocumentMoniker": "GestionTratatmientos\\View\\frmPaciente.cs",
               "ToolTip": "C:\\Users\\Usuario\\Documents\\GitHub\\HerramientasIII\\GestionTratatmientos\\GestionTratatmientos\\View\\frmPaciente.cs [Dise\u00F1o]",
               "RelativeToolTip": "GestionTratatmientos\\View\\frmPaciente.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T17:54:39.647Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-02-27T17:54:39.647Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "frmTratamiento.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\GitHub\\HerramientasIII\\GestionTratatmientos\\GestionTratatmientos\\View\\frmTratamiento.cs",
               "RelativeDocumentMoniker": "GestionTratatmientos\\View\\frmTratamiento.cs",
@@ -155,8 +153,7 @@
               "RelativeToolTip": "GestionTratatmientos\\GestionTratatmientos.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-02-27T17:48:56.268Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-27T17:48:56.268Z"
             },
             {
               "$type": "Document",
@@ -168,8 +165,7 @@
               "RelativeToolTip": "GestionTratatmientos\\View\\frmTratamiento.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAIAwwAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T17:44:59.333Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-27T17:44:59.333Z"
             },
             {
               "$type": "Document",
@@ -180,8 +176,7 @@
               "ToolTip": "C:\\Users\\Usuario\\Documents\\GitHub\\HerramientasIII\\GestionTratatmientos\\GestionTratatmientos\\View\\frmMenu.cs [Dise\u00F1o]",
               "RelativeToolTip": "GestionTratatmientos\\View\\frmMenu.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T17:55:06.46Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-02-27T17:55:06.46Z"
             },
             {
               "$type": "Document",
@@ -193,8 +188,7 @@
               "RelativeToolTip": "GestionTratatmientos\\View\\frmMenu.cs",
               "ViewState": "AgIAABAAAAAAAAAAAIAwwBoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T18:02:09.16Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-27T18:02:09.16Z"
             }
           ]
         }
