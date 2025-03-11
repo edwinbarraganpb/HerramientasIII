@@ -23,6 +23,12 @@ namespace GestionTratatmientos.Model
             this.Sexo = sexo;
         }
 
+        public Paciente(string cedula, string nombre)
+        {
+            this.Cedula = cedula;
+            this.Nombre = nombre;            
+        }
+
         public string Cedula { get => cedula; set => cedula = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public string Apellido { get => apellido; set => apellido = value; }
