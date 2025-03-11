@@ -31,7 +31,6 @@
             label1 = new Label();
             txtCedulaPaciente = new TextBox();
             groupBox1 = new GroupBox();
-            comboBox1 = new ComboBox();
             txtObservaciones = new TextBox();
             label5 = new Label();
             dtpFechaFinal = new DateTimePicker();
@@ -62,7 +61,6 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(comboBox1);
             groupBox1.Controls.Add(txtObservaciones);
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(dtpFechaFinal);
@@ -77,14 +75,6 @@
             groupBox1.TabIndex = 2;
             groupBox1.TabStop = false;
             groupBox1.Text = "Datos del tratamiento";
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(228, 80);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 8;
             // 
             // txtObservaciones
             // 
@@ -201,6 +191,5 @@
         private DateTimePicker dtpFechaInicio;
         private Label label3;
         private Button btnAsignarTratamiento;
-        private ComboBox comboBox1;
     }
 }

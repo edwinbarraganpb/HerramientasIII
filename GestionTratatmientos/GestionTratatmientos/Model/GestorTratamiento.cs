@@ -17,36 +17,35 @@ namespace GestionTratatmientos.Model
         public static bool AsignarTratamiento(Tratatmiento nuevoTratamiento)
         {
             enlaceBD = new Conexion();
-            BD = enlaceBD.AbrirConexion();
-            MessageBox.Show(BD.ConnectionString);
+            BD = enlaceBD.AbrirConexion();            
             string query = "INSERT INTO [TblTratamiento] " +
-                "([cedulaPaciente] ,[fechaAsignado],[fechaInicio],[fechaFinalizacion],[observaciones]) " +
+                "([cedulaPaciente],[fechaAsignado],[fechaInicio],[fechaFinalizacion],[observaciones]) " +
                 "VALUES " +
                 "(@cedulaPaciente,@fechaAsignado,@fechaInicio,@fechaFinalizacion,@observaciones)";
-            using (SqlCommand command = new SqlCommand(query, BD))
+            SqlCommand command = new SqlCommand(query, BD);
+            
+            command.Parameters.AddWithValue("@cedulaPaciente", nuevoTratamiento.CedulaPaciente);
+            command.Parameters.AddWithValue("@fechaAsignado", nuevoTratamiento.FechaAsignado);
+            command.Parameters.AddWithValue("@fechaInicio", nuevoTratamiento.FechaInicio);
+            command.Parameters.AddWithValue("@fechaFinalizacion", nuevoTratamiento.FechaFinalizacion);
+            command.Parameters.AddWithValue("@observaciones", nuevoTratamiento.Observaciones);
+            MessageBox.Show(query);
+            BD.Open();
+            try
             {
-                command.Parameters.AddWithValue("@cedulaPaciente", nuevoTratamiento.CedulaPaciente);
-                command.Parameters.AddWithValue("@fechaAsignado", nuevoTratamiento.FechaAsignado);
-                command.Parameters.AddWithValue("@fechaInicio", nuevoTratamiento.FechaInicio);
-                command.Parameters.AddWithValue("@fechaFinalizacion", nuevoTratamiento.FechaFinalizacion);
-                command.Parameters.AddWithValue("@observaciones", nuevoTratamiento.Observaciones);
-
-                BD.Open();
-                try
+                if (command.ExecuteNonQuery() == 1)
                 {
-                    if (command.ExecuteNonQuery() == 1)
-                    {
-                        return true;
-                    }
+                    return true;
                 }
-                catch 
-                {
-                    return false;
-                }
+            }
+            catch 
+            {
+                return false;
+            }
 
-                return true;
+            return true;
                 
-            }            
+                    
         }
 
         public static SqlDataReader ListarTratamientos(string cedulaPaciente)
@@ -54,12 +53,12 @@ namespace GestionTratatmientos.Model
             string query = "Select * from [TblTratamiento] " +
                "where cedulaPaciente = @cedulaPaciente";
             SqlDataReader registros = null;
-            using (SqlCommand command = new SqlCommand(query, BD))
-            {
-                command.Parameters.AddWithValue("@cedulaPaciente", cedulaPaciente);
-                BD.Open();
-                registros = command.ExecuteReader();
-            }
+            SqlCommand command = new SqlCommand(query, BD);
+         
+            command.Parameters.AddWithValue("@cedulaPaciente", cedulaPaciente);
+            BD.Open();
+            registros = command.ExecuteReader();
+      
 
             return registros;
         }

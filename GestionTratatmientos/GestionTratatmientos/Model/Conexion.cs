@@ -15,21 +15,21 @@ namespace GestionTratatmientos.Model
         public SqlConnection AbrirConexion() 
         
         {
-            using (SqlConnection con = new SqlConnection(connectionString))
+            SqlConnection con = new SqlConnection(connectionString);
+           
+            try
             {
-                try
-                {
-                    con.Open();
-                    MessageBox.Show("Conectado: " + con.ConnectionString);
-                    return con;
 
-                }
-                catch (Exception ex)
-                {
-                    System.Windows.Forms.MessageBox.Show("Error en la conexion" + ex.Message);
-                    return null;
-                }
+                MessageBox.Show("Conectado: " + con.ConnectionString);
+                return con;
+
             }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show("Error en la conexion" + ex.Message);
+                return null;
+            }
+          
         }
 
        
