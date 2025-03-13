@@ -24,7 +24,13 @@ namespace GestionTratatmientos.Model
             this.FechaFinalizacion = fechaFinalizacion;
             this.Observaciones = observaciones;
         }
-                
+        public Tratatmiento(string cedulaPaciente)
+        {
+            this.CedulaPaciente = cedulaPaciente;        
+        }
+
+
+
         public string CedulaPaciente { get => cedulaPaciente; set => cedulaPaciente = value; }
         public DateTime FechaAsignado { get => fechaAsignado; set => fechaAsignado = value; }
         public DateTime FechaInicio { get => fechaInicio; set => fechaInicio = value; }

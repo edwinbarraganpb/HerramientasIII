@@ -55,7 +55,7 @@
             // dgvTratamientos
             // 
             dgvTratamientos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTratamientos.Location = new Point(101, 132);
+            dgvTratamientos.Location = new Point(101, 142);
             dgvTratamientos.Name = "dgvTratamientos";
             dgvTratamientos.Size = new Size(588, 261);
             dgvTratamientos.TabIndex = 2;
@@ -68,6 +68,7 @@
             btnBuscar.TabIndex = 3;
             btnBuscar.Text = "Buscar";
             btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.Click += btnBuscar_Click;
             // 
             // frmPaciente
             // 

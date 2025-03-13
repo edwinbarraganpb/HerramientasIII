@@ -20,13 +20,19 @@ namespace GestionTratatmientos.Controller
             
         }
 
+        public TratamientoController(string cedulaPaciente)
+        {
+            this.gestionTratamiento = new Tratatmiento(cedulaPaciente);
+
+        }
+
         public Boolean GuardarTratamiento()
         {
             return (GestorTratamiento.AsignarTratamiento(gestionTratamiento)) ? true : false;
         }
 
         public SqlDataReader ListrarTratamientos()
-        {
+        {            
             return GestorTratamiento.ListarTratamientos(gestionTratamiento.CedulaPaciente);
         }
     }

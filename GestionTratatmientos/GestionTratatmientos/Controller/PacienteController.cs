@@ -20,7 +20,7 @@ namespace GestionTratatmientos.Controller
             List<Paciente> personas = new List<Paciente>();
             while (registros.Read())
             {
-                Paciente nuevoPaciente = new Paciente(registros["cedula"].ToString(),$"{registros["nombre"].ToString()}{registros["apellido"].ToString()}");
+                Paciente nuevoPaciente = new Paciente(registros["cedula"].ToString(),$"{registros["nombre"].ToString()}{" "}{registros["apellido"].ToString()}");
                 personas.Add(nuevoPaciente);
             }
 

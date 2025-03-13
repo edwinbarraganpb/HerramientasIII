@@ -26,9 +26,25 @@ namespace GestionTratatmientos.View
 
         }
 
+
+
+        private void cmbPacientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // MessageBox.Show(cmbPacientes.SelectedValue.ToString());
+        }
+
         private void frmPaciente_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            TratamientoController tratamiento = new TratamientoController(cmbPacientes.SelectedValue.ToString());
+            DataTable ListaTratamientos = new DataTable();
+            ListaTratamientos.Load(tratamiento.ListrarTratamientos());
+            dgvTratamientos.DataSource = ListaTratamientos;
+            
         }
     }
 }

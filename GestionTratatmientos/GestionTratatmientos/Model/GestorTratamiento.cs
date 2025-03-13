@@ -50,6 +50,9 @@ namespace GestionTratatmientos.Model
 
         public static SqlDataReader ListarTratamientos(string cedulaPaciente)
         {
+            enlaceBD = new Conexion();
+            BD = enlaceBD.AbrirConexion();
+
             string query = "Select * from [TblTratamiento] " +
                "where cedulaPaciente = @cedulaPaciente";
             SqlDataReader registros = null;
